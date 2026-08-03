@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-02 Day-12 Exercise</title>
+</head>
+
+<body>
+
+    <h1>Welcome</h1>
+
+    <br>
+
+    <!--
+        POST method is chosen because the form handles personal user data and the POST method
+        secures data by hiding it from the browser and URL bar
+     -->
+    <form action="https://example.com" method="post">
+        <h2>Ethio Telecom service</h2>
+
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name">
+        </div>
+        <br>
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email">
+        </div>
+        <br>
+        <div>
+            <label for="tel">Phone number</label><br>
+            <input type="tel" name="tel" id="tel" pattern="\+251[0-9]{9}">
+        </div>
+        <br>
+        <div>
+            <label for="branch">Select your branch</label><br>
+            <select name="branch" id="branch">
+                <option value="bole">Bole</option>
+                <option value="kazanchis">Kazanchis</option>
+                <option value="piassa">Piassa</option>
+            </select>
+        </div>
+        <br>
+    </form>
+
+    <br><hr><br>
+
+    <h2>Ethiopian Airlines</h2>
+    <table border="1" style="width: 600px;">
+        <caption>Selected Ethiopian Airlines Departures and Fares</caption>
+        <thead>
+            <tr>
+                <th scope="col">Flight</th>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Departs</th>
+                <th scope="col">Price ETB</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ET 148</td>
+                <td>Addis Ababa (ADD)</td>
+                <td>Bahir Dar (BJR)</td>
+                <td>6:20 AM</td>
+                <td>24,500*</td>
+            </tr>
+            <tr>
+                <td>ET 162</td>
+                <td>Addis Ababa (ADD)</td>
+                <td>Gonder(GDQ)</td>
+                <td>6:20 AM</td>
+                <td>27,707*</td>
+            </tr>
+            <tr>
+                <td>ET 206</td>
+                <td>Addis Ababa (ADD)</td>
+                <td>Dire Dawa (DIR)</td>
+                <td>7:15 AM</td>
+                <td>47,573*</td>
+            </tr>
+            <tr>
+                <td>ET 706</td>
+                <td>Addis Ababa (ADD)</td>
+                <td>Frankfurt (FRA)</td>
+                <td>12:05 AM</td>
+                <td>154,200*</td>
+            </tr>
+            <tr>
+                <td>ET 734</td>
+                <td>Addis Ababa (ADD)</td>
+                <td>Paris (CDG)</td>
+                <td>12:05AM</td>
+                <td>168,900*</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><hr><br>
+
+    <!-- Landmark & Map -->
+    <section>
+        <h2>Landmark & Map</h2>
+
+        <figure>
+            <img src="./nile.jpg" alt="Nile rive waterfall">
+            <figcaption>The Nile River, famously known as the longest river in the world.</figcaption>
+        </figure>
+
+        <br><br>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8067820.478364836!2d35.18670446997394!3d9.121424114814987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1635d0cedd6cfd2b%3A0x7bf6a67f5348c55a!2sEthiopia!5e0!3m2!1sen!2set!4v1785511888340!5m2!1sen!2set"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </section>
+
+    <br><hr><br>
+
+    <!-- Converting to accessible code -->
+    <section>
+        <h2>Converting to accessible code</h2>
+
+        <p><strong>Inaccessible code snippet</strong></p>
+
+        <div role="button">Click here</div> <br>
+        <input type="text"> <br><br>
+        <img src="./landcruiser.jpg" width="200">
+        
+        <br><br>
+
+        <p><strong>Accessible code snippet</strong></p>
+
+        <!-- This update makes screen readers consider the element as a button without using the role attribute -->
+        <button>Click here</button> <br>
+
+        <!--
+            This update makes screen readers read the label for the user. This makes easy for the user to
+            understand what to write in the feild.
+         -->
+        <label for="username"></label> <br>
+        <input type="text" name="username" id="username"> <br><br>
+
+        <!--
+            This update makes screen readers read the alt text for the user to understand the content of the image.
+         -->
+        <img
+            src="./landcruiser.jpg"
+            alt="A gray color LandCruiser Longbase"
+            width="200">
+    </section>
+</body>
+
+</html>
