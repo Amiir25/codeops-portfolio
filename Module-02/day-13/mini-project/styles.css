@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    /* Spacing scale */
+    --xx-small: 5px;
+    --x-small: 10px;
+    --small: 18px;
+    --meduim: 24px;
+    --large: 32px;
+    --x-large: 45px;
+    --xx-large: 60px;
+
+    /* width */
+    --card-width: 480px;
+    --desc-with: 80%;
+
+    /* Color Palette */
+    --accent: #04b104;
+    --main: #0000ff;
+    --text-primary: #000000;
+    --text-secondary: #ffffff;
+}
+
+* {
+    font-family: "Carlito", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    border: 1px solid var(--main);
+    border-radius: var(--x-small);
+    width: var(--card-width);
+    margin: var(--xx-large);
+    padding: var(--x-small);
+    position: relative;
+}
+
+.card::before {
+    content: "+";
+    position: absolute;
+    top: 0;
+    left: var(--x-small);
+    width: var(--meduim);
+    height: var(--meduim);
+    background-color: var(--main);
+    text-align: center;
+    color: var(--text-secondary);
+    border-radius: 0 0 var(--x-small) var(--x-small);
+}
+
+.card * {
+    text-align: center;
+}
+
+.title {
+    font-size: var(--x-large);
+    color: var(--main);
+    margin-top: var(--large);
+}
+
+.tagline {
+    font-size: var(--meduim);
+    margin-bottom: var(--large);
+}
+
+.description {
+    width: var(--desc-with);
+    margin: 0 auto;
+    font-size: var(--small);
+    margin-bottom: var(--large);
+    line-height: 1.5;
+}
+
+.cta {
+    border: none;
+    background-color: var(--main);
+    color: var(--text-secondary);
+    padding: var(--x-small) var(--small);
+    border-radius: var(--xx-small);
+    margin-bottom: var(--small);
+    font-size: var(--meduim);
+    text-decoration: none;
+}
+
+.cta:hover {
+    background-color: hsl(120, 96%, 30%);
+}
+
+address {
+    margin-top: var(--large);
+}
+
+address a {
+    display: block;
+    color: var(--text-primary);
+}
+
+address a:hover {
+    color: var(--main);
+}
