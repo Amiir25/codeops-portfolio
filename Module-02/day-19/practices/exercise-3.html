@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-02 Day-19 Exercise-03</title>
+    <style>
+        .btn-wrapper {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Add a click listener to a button that logs event.target, then wrap the button in a div with its own
+        listener and observe bubbling.
+    -->
+    <div class="btn-wrapper">
+        <button class="btn">
+            Click Here
+        </button>
+    </div>
+
+
+    <script>
+        const btnWrapper = document.querySelector(".btn-wrapper");
+        const btn = document.querySelector(".btn");
+
+        btn.addEventListener("click", (e) => {
+            console.log(e.target);
+        })
+
+        btnWrapper.addEventListener("click", (e) => {
+            console.log(e.target);
+        })
+    </script>
+</body>
+</html>

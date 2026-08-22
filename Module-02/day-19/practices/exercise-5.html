@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-02 Day-19 Exercise-05</title>
+</head>
+<body>
+    <!--
+        Add a form with one text input; on submit, preventDefault, read input.value, append it to a list,
+        and clear the field.
+    -->
+    
+    <div>
+        <input type="text" id="input-field">
+        <button type="submit" class="submit">
+            Submit
+        </button>
+    </div>
+
+    <ol class="list"></ol>
+
+
+    <script>
+        const inputField = document.querySelector("#input-field");
+        const submitBtn = document.querySelector(".submit");
+        const list = document.querySelector(".list");
+
+        submitBtn.addEventListener("click", (e) => {
+            // preventDefault
+            e.preventDefault();
+
+            // read input.value
+            const inputValue = inputField.value;
+
+            // append it to a list
+            const listItem = document.createElement("li");
+            listItem.textContent = inputValue;
+            list.append(listItem);
+
+            // clear the field
+            inputField.value = "";
+        })
+    </script>
+</body>
+</html>

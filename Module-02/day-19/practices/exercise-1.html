@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-02 Day-19 Exercise-01</title>
+    <style>
+        h1 {
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .green {
+            color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Select an <h1> and change its text with textContent, then add a CSS class to it with
+        classList.toggle.
+     -->
+    <h1 class="title">
+        HTML is nice
+    </h1>
+
+    <script>
+        const title = document.querySelector(".title");
+        title.addEventListener("click", () => {
+            title.textContent = "CSS is Cool";
+            title.classList.toggle("green");
+        })
+    </script>
+</body>
+</html>

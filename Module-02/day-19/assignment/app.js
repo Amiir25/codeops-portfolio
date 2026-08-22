@@ -74,15 +74,3 @@ list.addEventListener("click", (e) => {
   // 5. Call render()
   render();
 })
-
-
-
-
-
-
-
-
-
-
-
-

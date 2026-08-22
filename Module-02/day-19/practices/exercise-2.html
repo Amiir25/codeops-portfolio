@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-02 Day-19 Exercise-02</title>
+</head>
+<body>
+    <!-- 
+        Given an array of three Ethiopian city names, create an <li> for each with createElement and
+        append them to a <ul>.
+    -->
+    <u class="city-list"></u>
+
+    <script>
+        const cities = ["Addis Ababa", "Adama", "Jima", "Hawasa", "Gonder", "Harar"];
+        const cityList = document.querySelector(".city-list");
+
+        cities.forEach(city => {
+            const newCity = document.createElement("li");
+            newCity.textContent = city;
+            cityList.append(newCity);
+        })
+    </script>
+</body>
+</html>

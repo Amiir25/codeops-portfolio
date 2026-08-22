@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-02 Day-19 Exercise-04</title>
+    <style>
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 400px;
+            padding: 10px 20px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Build a list of items each with a delete button, and remove any item using a single delegated
+        listener on the parent.
+    -->
+
+    <div class="wrapper">
+        <div class="item item-1">
+            <h3>Item 1</h3>
+            <button class="delete 1">Delete</button>
+        </div>
+        <div class="item item-2">
+            <h3>Item 2</h3>
+            <button class="delete 2">Delete</button>
+        </div>
+        <div class="item item-3">
+            <h3>Item 3</h3>
+            <button class="delete 3">Delete</button>
+        </div>
+        <div class="item item-4">
+            <h3>Item 4</h3>
+            <button class="delete 4">Delete</button>
+        </div>
+        <div class="item item-5">
+            <h3>Item 5</h3>
+            <button class="delete 5">Delete</button>
+        </div>
+    </div>
+
+
+    <script>
+        const wrapper = document.querySelector(".wrapper");
+        const deleteBtn = document.querySelector(".delete");
+
+        wrapper.addEventListener("click", (e) => {
+            if (e.target.classList.contains("delete")) {
+                const item = e.target.closest(".item");
+                item.remove();
+            }
+        })
+
+    </script>
+</body>
+
+</html>
