@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addis Eats - Food Ordering App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Addis Eats</h1>
+        </header>
+
+        <section class="search-area">
+            <label for="search-input">Search Foods</label>
+            <input type="search" id="search-input" placeholder="Enter keywords...">
+        </section>
+
+        <main>
+            <section class="menu">
+                <h2>Our Menu</h2>
+                <div class="menu-list">
+                    <!-- Food cards go here dynamically -->
+                </div>
+            </section>
+        </main>
+        <aside class="cart">
+            <h2>Your Cart</h2>
+
+            <!-- Cart items go here dynamically -->
+
+            <!-- Price Section -->
+            <div class="cart-bottom">
+                <div class="subtotal">
+                    <p>Subtotal</p>
+                    <p class="subtotal-price">0</p>
+                </div>
+                <div class="vat">
+                    <p>Vat</p>
+                    <p class="vat-price">0</p>
+                </div>
+                <div class="line"></div>
+                <div class="total">
+                    <h3>Total</h3>
+                    <h4 class="total-price">0</h4>
+                </div>
+                <button class="checkout">
+                    Checkout
+                </button>
+            </div>
+        </aside>
+
+        <section class="checkout-form hidden">
+            <div>
+                <h2>Pay With <span class="telebirr">teleBirr</span></h2>
+                <form action="" method="post">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="John Doe">
+                        <p class="nameMsg"></p>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+251912345678">
+                        <p class="phoneMsg"></p>
+                    </div>
+                    <button class="pay">
+                        Pay
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- <footer>
+            Footer
+        </footer> -->
+    </div>
+
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
