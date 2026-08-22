@@ -1,0 +1,70 @@
+<!-- 
+Build a navbar with Flexbox: a logo on the left and three links plus a button on the right,
+vertically centered, using justify-content: space-between.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-02 Day-14 Exercise-01</title>
+    <style>
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .sign-in {
+            padding: 8px 18px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Logo</h1>
+        <nav>
+            <ul class="links">
+                <li>
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <button class="sign-in">
+                Sign In
+            </button>
+        </nav>
+    </header>
+</body>
+
+</html>

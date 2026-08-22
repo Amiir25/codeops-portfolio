@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-areas:
+        "header   header"
+        "sidebar   main"
+        "footer   footer";
+    min-height: 100vh;
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* *** HEADER *** */
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 40px;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 12px;
+}
+
+.nav-links {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* *** SIDEBAR *** */
+aside {
+    grid-area: sidebar;
+    padding-top: 100px;
+}
+
+aside h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* *** MAIN *** */
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main h2 {
+    font-size: 60px;
+}
+
+main p {
+    font-size: 20px;
+    max-width: 600px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+main div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+main div button {
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+main div button:first-child {
+    background: #A21CAF;
+    color: white;
+    border: 1px solid transparent;
+}
+
+main div button:last-child {
+    color: #BD9D4E;
+    border: 1px solid #BD9D4E;
+    background: none;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+}

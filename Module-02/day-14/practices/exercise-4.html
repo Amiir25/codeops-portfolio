@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-02 Day-14 Exercise-04</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header     header"
+                "sidebar    main"
+                "footer     footer";
+            height: 100vh;
+        }
+
+        header,
+        aside,
+        main,
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        aside {
+            grid-area: sidebar;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <main>Main</main>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

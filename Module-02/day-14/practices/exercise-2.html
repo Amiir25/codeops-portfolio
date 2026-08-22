@@ -1,0 +1,37 @@
+<!-- 
+Create a row of four cards with flex: 1 so they share the width equally, then add flex-wrap and a
+gap so they reflow on a narrow screen.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-02 Day-14 Exercise-02</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            flex: 1;
+            width: 200px;
+            height: 400px;
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="card">Card</div>
+        <div class="card">Card</div>
+        <div class="card">Card</div>
+        <div class="card">Card</div>
+    </section>
+</body>
+</html>
