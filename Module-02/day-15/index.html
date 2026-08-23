@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habesha Eatery | Addis Ababa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#" class="logo">Habesha <span>Eatery</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reserve">Reserve</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Bold Flavors, <br> Timeless Traditions</h1>
+        <p>
+          Whether you join us for a quiet lunch or a lively evening with friends and family, you will find the
+          warm service, and a space that feels like it belongs to everyone who walks through our doors.
+        </p>
+        <a href="#reserve" class="btn-primary">Reserve a Table</a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+      <div class="about-text">
+        <h2>Our Story</h2>
+        <p>
+          Habesha Eatery started in 2015 as a small family kitchen in the Bole
+          neighborhood of Addis Ababa. What began as a place for neighbors to
+          share coffee and injera has grown into a home for anyone who wants
+          to experience real Ethiopian hospitality. Every dish on our menu is
+          inspired by recipes passed down from our grandmothers, cooked slowly
+          and shared the traditional way &mdash; on one big platter, with your
+          hands, with your family.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="./images/hero2.jpg" alt="Traditional Ethiopian injera platter">
+      </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="menu">
+      <h2>Our Menu</h2>
+      <p class="menu-intro">A few of our most loved dishes</p>
+
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <img src="./images/doro-wat.jpeg" alt="Doro Wat stew">
+          <h3>Doro Wat</h3>
+          <p>Slow-cooked chicken stew in a spiced berbere sauce, served with a boiled egg and injera.</p>
+          <span class="price">350 birr</span>
+        </div>
+
+        <div class="menu-card">
+          <img src="./images/tibs.jpeg" alt="Beef Tibs">
+          <h3>Tibs</h3>
+          <p>Sauteed beef cubes with onions, peppers, and rosemary, cooked to order.</p>
+          <span class="price">320 birr</span>
+        </div>
+
+        <div class="menu-card">
+          <img src="./images/kitfo.jpeg" alt="Kitfo dish">
+          <h3>Kitfo</h3>
+          <p>Minced beef seasoned with mitmita and niter kibbeh, served warm or raw-style.</p>
+          <span class="price">380 birr</span>
+        </div>
+
+        <div class="menu-card">
+          <img src="./images/shiro.jpeg" alt="Shiro stew">
+          <h3>Shiro</h3>
+          <p>Creamy spiced chickpea stew, a vegetarian favorite served bubbling hot.</p>
+          <span class="price">220 birr</span>
+        </div>
+
+        <div class="menu-card">
+          <img src="./images/buna.jpeg"
+            alt="Ethiopian coffee ceremony">
+          <h3>Buna (Coffee Ceremony)</h3>
+          <p>Freshly roasted coffee beans, brewed in a jebena and served with popcorn.</p>
+          <span class="price">120 birr</span>
+        </div>
+
+        <div class="menu-card">
+          <img src="./images/enjera.jpeg" alt="Injera bread">
+          <h3>Extra Injera</h3>
+          <p>Our house-made sourdough flatbread, baked fresh every morning.</p>
+          <span class="price">40 birr</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESERVATION SECTION -->
+    <section id="reserve" class="reserve">
+      <h2>Reserve a Table</h2>
+      <form class="reserve-form" action="#" method="post">
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required minlength="2">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="09xx xxx xxx" pattern="[0-9+ ]{7,15}" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+          </div>
+
+          <div class="form-group">
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests" required>
+              <option value="">Select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5+">5+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Special Requests</label>
+          <textarea id="notes" name="notes" rows="4"
+            placeholder="Allergies, seating preference, celebrations..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Confirm Reservation</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-col">
+      <h3>Habesha Eatery</h3>
+      <p>Bole Road, near Edna Mall<br>Addis Ababa, Ethiopia</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>Phone: +251 91 234 5678<br>Email: hello@habeshaeatery.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Hours</h3>
+      <p>Mon &ndash; Fri: 11:00 &ndash; 22:00<br>Sat &ndash; Sun: 09:00 &ndash; 23:00</p>
+    </div>
+
+    <p class="copyright">&copy; 2026 Habesha Eatery. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
