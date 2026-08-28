@@ -1,35 +1,28 @@
 import React from "react";
 import "./Menu.css";
+import { useState } from "react";
+import { menu } from "../../assets/data";
+import CategoryBar from "../CategoryBar/CategoryBar";
+import Dish from "../Dish/Dish";
+import Cart from "../Cart/Cart";
 
-const Menu = ({ menu, category }) => {
-  const filteredMenu = menu.filter((dish) => dish.category === category);
+const Menu = ({ onCart }) => {
+  const [category, setCategory] = useState("All");
 
-  // if (filteredMenu.length === 0) {
-  //   return (
-      
-  //   );
-  // }
+  const filteredMenu =
+    category === "All"
+      ? menu
+      : menu.filter((dish) => dish.category === category);
 
   return (
     <section>
-      <h2>Filtered Menu:
-        <span className="category"> {category}</span>
-      </h2>
-      {filteredMenu.length === 0
-        ? (
-          <p>🍽️ No dishes found for "{category}"</p>
-        )
-        : (
-          <div className="filteredMenu">
-            {filteredMenu.map((dish) => (
-              <div key={dish.id}>
-                <h3>{dish.name}</h3>
-                <p>{dish.price} ETB</p>
-              </div>
-            ))}
-          </div>
-        )
-      }
+      <CategoryBar selected={category} onSelect={setCategory} />
+
+      <section className="menu-list">
+        {filteredMenu.map((dish) => (
+          <Dish key={dish.id} dish={dish} onCart={onCart} />
+        ))}
+      </section>
     </section>
   );
 };
