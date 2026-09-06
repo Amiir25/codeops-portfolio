@@ -19,7 +19,6 @@ function App() {
   return (
     <>
       <Cart cart={cart} price={price} onOrder={setOrder}/>
-      <Header />
       <Menu onCart={handleCart} />
 
       {order && <OrderForm/>}

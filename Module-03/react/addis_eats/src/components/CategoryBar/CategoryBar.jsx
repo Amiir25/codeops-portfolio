@@ -1,7 +1,7 @@
 import React from "react";
 import "./CategoryBar.css";
 
-const categoryList = ["All", "Main", "Vegetarian", "Side", "Breakfast"];
+const categoryList = ["All", "Breakfast", "Main", "Vegan", "Stew", "Side"];
 
 const CategoryBar = ({ selected, onSelect }) => {
   return (
