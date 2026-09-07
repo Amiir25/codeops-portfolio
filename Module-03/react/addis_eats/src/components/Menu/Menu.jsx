@@ -5,46 +5,20 @@ import CategoryBar from "../CategoryBar/CategoryBar";
 import Dish from "../Dish/Dish";
 import Cart from "../Cart/Cart";
 import Header from "../Header/Header";
+import useFetch from "../../hooks/useFetch";
 
-const Menu = ({ onCart }) => {
-  const [category, setCategory] = useState("All");
-  const [dishes, setDishes] = useState([]);
+const Menu = () => {
 
-  // States
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-
-  // Search
-  const [searchQuery, setSearchQuery] = useState("");
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadMenu = async () => {
-      try {
-        const res = await fetch("/src/assets/menu.json", {
-          signal: controller.signal,
-        });
-        if (!res.ok) throw new Error("Could not load the menu!");
-        const data = await res.json();
-
-        // Filtering by category
-        const filteredCategory =
-          category === "All"
-            ? data
-            : data.filter((dish) => dish.category === category);
-
-        setDishes(filteredCategory);
-      } catch (err) {
-        if (err.name !== "AbortError") setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadMenu();
-
-    return () => controller.abort();
-  }, [category]);
+  const {
+    category,
+    setCategory,
+    dishes,
+    setDishes,
+    loading,
+    error,
+    searchQuery,
+    setSearchQuery,
+  } = useFetch();
 
   // Handle search
   const handleSearch = (e) => {
@@ -66,7 +40,7 @@ const Menu = ({ onCart }) => {
 
       <section className="menu-list">
         {dishes.map((dish) => (
-          <Dish key={dish.id} dish={dish} onCart={onCart} />
+          <Dish key={dish.id} dish={dish} />
         ))}
       </section>
     </section>

@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Dish.css";
 import PropTypes from "prop-types";
 import Card from "../Card/Card";
 import { useState } from "react";
+import { CartContext } from "../../context/CartProvider";
 
-const Dish = ({ dish, onCart, currency = "ETB" }) => {
+const Dish = ({ dish, currency = "ETB" }) => {
   
+  const { handleCart } = useContext(CartContext);
   const [qty, setQty] = useState(0);
 
   const handleOrder = (price) => {
     setQty((prev) => prev + 1);
-    onCart(price)
+    handleCart(price)
   };
 
   return (

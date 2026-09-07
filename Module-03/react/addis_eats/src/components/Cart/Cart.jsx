@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Cart.css";
+import { CartContext } from "../../context/CartProvider";
 
-const Cart = ({ cart, price, onOrder }) => {
+const Cart = () => {
+
+  const { cart, price, order } = useContext(CartContext);
+
   return (
     <div className="cart">
       <h2>Cart</h2>

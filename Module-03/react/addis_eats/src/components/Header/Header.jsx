@@ -2,13 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Header.css";
 
 const Header = ({ searchQuery, onSearch }) => {
-
   const searchRef = useRef(null);
 
   // Focus on mount
   useEffect(() => {
     searchRef.current.focus();
-  }, [])
+  }, []);
 
   return (
     <header>
