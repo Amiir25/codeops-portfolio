@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default function DishList() {
+export default function DishList({ dish }) {
   return (
-    <div>DishList</div>
-  )
+    <div>
+      { dish.nameEn }
+    </div>
+  );
 }
