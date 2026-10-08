@@ -10,12 +10,23 @@
   --color-foreground: var(--foreground);
   /* --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono); */
+
+    --color-brand: #9B2C16;
+    
+    --color-light-red: #FCEAE4;
+    --color-dark-red: #7A1401;
+    --color-light-yellow: #FFDEAD;
+    --color-dark-yellow: #7E5700;
+
+    /* Text colors */
+    --color-dark-text: #58413D;
+    --color-light-text: #281900;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --background: #0a0a0a; */
+    /* --foreground: #ededed; */
   }
 }
 

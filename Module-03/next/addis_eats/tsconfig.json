@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "components/ui/Button.jsx", "components/home/HomeHero.jsx", "app/page.jsx", "api/dishes.js", "hooks/useFetchSpecials.jsx", "components/home/GurshaSpirit.jsx", "components/home/CTA.jsx", "components/LargeScreenNavbar.jsx"  ],
   "exclude": ["node_modules"]
 }
