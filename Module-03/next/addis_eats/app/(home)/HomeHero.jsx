@@ -1,5 +1,6 @@
 "use client"
 
+import Button from "@/components/ui/Button";
 import React, { useEffect, useState } from "react";
 import {
   FaArrowDown,
@@ -7,7 +8,6 @@ import {
   FaCircleDot,
   FaMugSaucer,
 } from "react-icons/fa6";
-import Button from "../ui/Button";
 
 // Hero buttons
 const heroBtns = [

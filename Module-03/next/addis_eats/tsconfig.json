@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "components/ui/Button.jsx", "components/home/HomeHero.jsx", "app/page.jsx", "api/dishes.js", "hooks/useFetchSpecials.jsx", "components/home/GurshaSpirit.jsx", "components/home/CTA.jsx", "components/LargeScreenNavbar.jsx"  ],
+, "components/ui/Button.jsx", "app/(home)/HomeHero.jsx", "app/(home)/page.jsx", "api/dishes.js", "hooks/useFetchSpecials.jsx", "app/(home)/GurshaSpirit.jsx", "app/(home)/CTA.jsx", "components/LargeScreenNavbar.jsx"  ],
   "exclude": ["node_modules"]
 }

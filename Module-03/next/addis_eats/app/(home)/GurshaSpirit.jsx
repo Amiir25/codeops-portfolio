@@ -1,5 +1,5 @@
+import Button from "@/components/ui/Button";
 import { FaPlus, FaYelp } from "react-icons/fa6";
-import Button from "../ui/Button";
 
 // Gursha section data
 const gurshaData = [

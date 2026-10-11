@@ -1,9 +1,9 @@
-import CTA from "@/components/home/CTA";
-import GurshaSpirit from "@/components/home/GurshaSpirit";
-import HomeHero from "@/components/home/HomeHero";
-import Reflections from "@/components/home/Reflections";
-import SpecialDishes from "@/components/home/SpecialDishes";
 import { FaCircleCheck } from "react-icons/fa6";
+import CTA from "./CTA";
+import GurshaSpirit from "./GurshaSpirit";
+import HomeHero from "./HomeHero";
+import Reflections from "./Reflections";
+import SpecialDishes from "./SpecialDishes";
 
 const Home = () => {
   return (
