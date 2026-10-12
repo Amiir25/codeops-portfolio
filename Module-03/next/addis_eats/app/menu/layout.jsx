@@ -3,7 +3,7 @@ import React from 'react'
 export default function layout({ children }) {
   return (
     <main className='h-screen flex items-start gap-4'>
-        <aside className='px-10 border-r h-full pt-10 bg-gray-950'>
+        {/* <aside className='px-10 border-r h-full pt-10 bg-gray-950'>
             <h2 className='text-xl font-semibold mb-6'>Categories</h2>
             <div>
                 <p>All Dishes</p>
@@ -13,7 +13,7 @@ export default function layout({ children }) {
                 <p>Fasting & Vegan / Tsom</p>
                 <p>Hot Drinks</p>
             </div>
-        </aside>
+        </aside> */}
         
         <section>{ children }</section>
     </main>
