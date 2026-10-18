@@ -1,13 +1,22 @@
 "use client"
 
-import useFetchSpecials from "@/hooks/useFetchSpecials";
+// import useFetchSpecials from "@/hooks/useFetchSpecials";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FaUtensils } from "react-icons/fa6";
+import useSWR from "swr";
+
+// Fetcher
+async function fetcher(url) {
+  const res = await fetch(url);
+  if (!res) throw new Error("Request failed: ", res.status);
+  return res.json().data;
+}
 
 const SpecialDishes = () => {
   const router = useRouter();
-  let { specials, loading, error } = useFetchSpecials();
+  // let { specials, loading, error } = useFetchSpecials();
+  const { data, isLoading, error } = useSWR("/specials.json", fetcher);
 
   return (
     <section id="specials" className="mt-24">
