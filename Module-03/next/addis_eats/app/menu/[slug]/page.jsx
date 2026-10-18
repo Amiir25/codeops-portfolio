@@ -6,10 +6,17 @@ import DishDetailRightContent from "../(components)/(dish)/DishDetailRightConten
 import useFetchDishes from "@/hooks/useFetchDishes";
 import CartInfo from "../(components)/CartInfo";
 
+// Pre-build the dishes page
+export function generateStaticParams(dishes) {
+  return dishes.map((dish) => ({ slug: dish.slug }))
+}
+
 const DishDetail = async ({ params }) => {
   const { slug } = await params;
   const { dishes, loading, error } = useFetchDishes();
   const selectedDish = dishes.find((dish) => dish.slug === slug);
+
+  generateStaticParams(dishes);
 
   if (loading || (dishes.length === 0 && !error)) {
     return (

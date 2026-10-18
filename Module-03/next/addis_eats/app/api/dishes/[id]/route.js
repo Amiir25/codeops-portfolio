@@ -1,11 +1,13 @@
-const idList = [11, 12, 13, 14, 15, 16, 17];
+import { NextResponse } from "next/server";
+import useFetchDishes from "@/hooks/useFetchDishes";
 
-export const GET = async ({ params }) => {
-    const { id } = await params;
-    
-    if (!idList.includes(Number(id))) {
-        return Response.json({ status: 404, message: "Dish not found" });
-    }
+export async function GET({ params }) {
+  const { dishes } = useFetchDishes();
+  const { slug } = await params;
+  const dish = dishes.find(d => d.slug === slug)
 
-    return Response.json({ status: 200, message: "success" });
+  if (!dish) {
+    return NextResponse.json({ error: "Dish not found" }, { status: 404 });
+  }
+  return NextResponse.json(dish);
 }
